@@ -1,2 +1,9 @@
 # Anagram-Docker
-Will fill in with more descriptive information soon
+In this project, my previously existing Anagram program, which is a Flask application that implements REST API services and connects to a MySQL Database, (titled Anagram in my Github repositories), has been completely dockerized. In the Anagram-Docker program, two new directories, titled app and db, were created. The reason behind this was that I am using three docker containers in this program, and two of the containers utilize their own Dockerfiles when building the images and running the containers. One container contains the flask application, another container contains the MySQL database, and the other container contains an image titled adminer from Docker Hub. The reason behind using the adminer image in the Anagram-Docker project was so that I could view my database in a GUI format, similar to using MySQL Workbench in the Anagram project. Additionally, a docker-compose.yml file was used to run multiple containers and connect them to one another. A sql file was also written so that the database could be created if the container was just created, or reopened if we are opening up the container again. It should be kept in mind, however, that if the container is closed then the data in the database will disappear. To run the project, terminal was used, where I used docker-compose up --build (the build command was used to ensure that the latest code was used for the project). The following images provide an insight into the tools and output that I dealt with when creating this project.
+
+
+<img width="1018" alt="image" src="https://user-images.githubusercontent.com/81287555/189565541-69b149df-e9a3-4c6e-b929-475b7f0c7d6c.png">
+<img width="1021" alt="image" src="https://user-images.githubusercontent.com/81287555/189566748-3c24dc91-367f-44ea-90ad-51407f7b34ac.png">
+<img width="1025" alt="image" src="https://user-images.githubusercontent.com/81287555/189566825-c2ac0209-a0f2-44c7-a57f-e0a6dcdff7a0.png">
+<img width="728" alt="image" src="https://user-images.githubusercontent.com/81287555/189566947-24934e86-adf4-46a4-83db-5a631c1f5057.png">
+
